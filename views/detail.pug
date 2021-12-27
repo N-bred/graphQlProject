@@ -1,0 +1,15 @@
+html 
+    head
+        title = "Recipe: " + data.name
+        link(rel='stylesheet', href='/public/style.css')
+
+    body(class="detail")
+    div.root
+            h1= data.name
+            h2 Ingredients
+            ul
+                each ingredient in data.ingredients
+                    li= ingredient
+            div.images 
+                each image in data.detail_images
+                    img(src=image)

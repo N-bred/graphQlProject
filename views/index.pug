@@ -1,0 +1,14 @@
+html
+    head
+        title="All Recipes"
+        link(rel='stylesheet', href='/public/style.css')
+    body
+    div.root
+        ul
+            h1= "Guten Tag"
+            each item in data 
+                li 
+                    a(href="/recipe/" + item.id )
+                        p= item.name
+                        img(src=item.image)
+                            
