@@ -16,6 +16,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
 }
 
 .content {
@@ -23,6 +24,10 @@ body {
   background: #fbfbfd;
   border-radius: 0.5rem;
   padding: 5rem;
+}
+
+img {
+  width: 100%;
 }
 
 h1 {
@@ -35,6 +40,10 @@ ul {
   background-color: #eff0f2;
   border: 10px double grey;
   padding: 2.5rem;
+}
+
+ul.no-border {
+  border: none;
 }
 
 ul a {
@@ -69,4 +78,34 @@ ul a li p {
 ul a li img {
   width: 100%;
   flex-basis: 60%;
+}
+
+.recipe {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 2.5rem 0;
+  height: 100%;
+}
+
+.recipe h2 {
+  font-size: 1.8rem;
+}
+
+.recipe .text {
+  flex-basis: 40%;
+}
+
+.recipe ul li {
+  font-size: 1.5rem;
+}
+
+.recipe .resume {
+  font-size: 1.2rem;
+  flex-basis: 60%;
+  padding: 2.5rem;
+}
+
+.images {
+  display: flex;
 }

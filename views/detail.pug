@@ -4,12 +4,17 @@ block head
     title="Recipe: " + data.name
 
 block content
-    h1= data.name
-        h2 Ingredients
-        ul
-            each ingredient in data.ingredients
-                li= ingredient
-        div.images 
-            each image in data.images
-                img(src=image)
-            
+    div.content
+        h1= data.name
+            div.recipe
+                div.text
+                    h2="Ingredientes"
+                    ul
+                        each ingredient in data.ingredients
+                            li= ingredient
+                div.resume
+                    p=data.resume
+            div.images 
+                each image in data.images
+                    img(src=image)
+                

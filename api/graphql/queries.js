@@ -14,7 +14,8 @@ const queries = {
                 id,
                 name,
                 ingredients,
-                images
+                images,
+                resume
             }
         }
     `,

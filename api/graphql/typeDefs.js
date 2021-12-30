@@ -6,6 +6,7 @@ const typeDefs = gql`
     name: String
     ingredients: [String]
     images: [String]
+    resume: String
   }
 
   type Query {
