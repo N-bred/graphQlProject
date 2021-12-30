@@ -1,10 +1,12 @@
 extends layout
 
 block head
-    title="Recipe: " + data.name
+    title="Receta: " + data.name
 
 block content
     div.content
+        div.go-back
+            a(href="/")="Ir Atras ←"
         h1= data.name
             div.recipe
                 div.text

@@ -109,3 +109,13 @@ ul a li img {
 .images {
   display: flex;
 }
+
+.go-back a {
+  text-decoration: none;
+  color: #0176c7;
+  font-size: 1.3rem;
+}
+
+.go-back a:hover {
+  color: #0c558a;
+}
