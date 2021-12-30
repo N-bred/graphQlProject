@@ -10,6 +10,7 @@ const typeDefs = gql`
 
   type Query {
     recipes: [Recipe]
+    recipe(id: Int!): Recipe
   }
 `
 

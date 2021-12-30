@@ -1,16 +1,17 @@
 const { Router } = require('express')
-const { recipe } = require('../controllers/recipes.controller')
-const { allRecipes } = require('../controllers/allrecipes.controller')
+const { queries } = require('../graphql/queries')
+const { fetchGraphql } = require('../../utils/fetchGraphql')
 
 const router = Router()
 
-router.get('/', (req, res) => {
-  const data = allRecipes()
-  res.render('index.pug', { data })
+router.get('/', async (req, res) => {
+  const { data } = await fetchGraphql(queries.recipes())
+  res.render('index.pug', { data: data.recipes })
 })
 
-router.get('/recipe/:id', (req, res) => {
-  res.render('detail.pug', { data: recipe(parseInt(req.params.id)) })
+router.get('/recipe/:id', async (req, res) => {
+  const { data } = await fetchGraphql(queries.recipe(req.params.id))
+  res.render('detail.pug', { data: data.recipe })
 })
 
 module.exports = {

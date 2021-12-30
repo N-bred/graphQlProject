@@ -3,14 +3,15 @@ const { ApolloServer } = require('apollo-server-express')
 const { router } = require('./api/router/router')
 const { typeDefs } = require('./api/graphql/typeDefs')
 const { resolvers } = require('./api/graphql/resolvers')
-const PORT = 3000
+const { PORT } = require('./constants')
 
 const app = express()
 
 //Config
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
-app.set('public', './public')
+app.use(express.static(__dirname + '/public'))
+app.use(router)
 app.set('views', './views')
 app.set('view engine', 'pug')
 
