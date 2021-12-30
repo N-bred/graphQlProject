@@ -4,10 +4,12 @@ block head
     title="All Recipes"
 
 block content
-    ul
-        h1= "Guten Tag"
-        each item in data 
-            li 
-                a(href="/recipe/" + item.id )
-                    p= item.name
-                    img(src=item.images[0])
+    div.content
+        h1="Todas las Recetas!"
+        div.recipes
+            ul
+                each recipe in data
+                    a(href="/recipe/" + recipe.id)
+                        li
+                            p= recipe.name
+                            img(src=recipe.images[0])

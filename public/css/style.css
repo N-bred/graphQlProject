@@ -7,59 +7,66 @@
 }
 
 body {
-  background: #e4e8e9;
-  font-size: 1rem;
+  font-size: 62.5%;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.root {
+  background: url('/img/pattern.jpg');
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.root {
-  background: #b5bbbf;
-  padding: 3.5rem;
-  width: 100%;
+.content {
+  max-width: 1140px;
+  background: #fbfbfd;
+  border-radius: 0.5rem;
+  padding: 5rem;
 }
 
 h1 {
-  color: white;
-  font-size: 3rem;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: lighter;
 }
 
 ul {
-  list-style: none;
+  background-color: #eff0f2;
+  border: 10px double grey;
+  padding: 2.5rem;
 }
 
-a {
+ul a {
+  display: block;
   text-decoration: none;
-  color: white;
-  font-size: 2rem;
   margin: 2.5rem 0;
-  display: block;
+  transition: background 0.3s ease-in;
 }
 
-a p {
-  margin: 1.5rem 0;
+ul a:visited {
+  color: none;
 }
 
-body.detail {
-  flex-direction: column;
+ul a:hover {
+  background: #dcdcdd;
 }
 
-div.images img:not(:first-child) {
-  width: 300px;
-  height: 300px;
-  margin: 0 1.5rem;
+ul a li {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
-h2 {
-  color: white;
+ul a li p {
+  color: #0176c7;
+  font-size: 2.1rem;
+  flex-basis: 40%;
+  font-weight: lighter;
+  text-align: center;
 }
 
-body.detail ul {
-  list-style: circle;
-}
-
-body.detail ul li {
-  margin: 1.5rem 0;
-  display: block;
+ul a li img {
+  width: 100%;
+  flex-basis: 60%;
 }
